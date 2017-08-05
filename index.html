@@ -18,10 +18,15 @@
 </nav>
 
 <form class="mw8 center black-80 pa4">
-    <div class="measure">
+    <div class="measure pb2">
         <label for="dayrate" class="f6 b db mb2">day rate:</label>
         <input id="dayrate" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc"
                placeholder="Enter your day rate e.g. 400">
+    </div>
+    <div class="measure pb4 black-40">
+        <label for="vatpc" class="f6 b db mb2">vat %:</label>
+        <input id="vatpc" class="input-reset ba b--black-20 black-40 pa2 mb2 db w-100" type="text" aria-describedby="name-desc"
+               value="20">
     </div>
 </form>
 
@@ -332,7 +337,7 @@
         function update_table() {
             var day_rate = document.getElementById("dayrate").value;
             var per_week = day_rate * 5;
-            var per_week_inc_vat = per_week * 1.2;
+            var per_week_inc_vat = per_week * (document.getElementById("vatpc").value / 100 + 1);
             
             document.getElementById("perweek").innerText = per_week;
             document.getElementById("perweekvat").innerText = per_week_inc_vat;
@@ -352,6 +357,7 @@
         }
 
         document.getElementById("dayrate").addEventListener("keyup", update_table);
+        document.getElementById("vatpc").addEventListener("keyup", update_table);
     });
 </script>
 </body>
