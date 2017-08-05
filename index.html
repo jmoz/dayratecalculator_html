@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAY RATE CALCULATOR</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+</head>
+<body class="code">
+<nav class="dt w-100 border-box pa4">
+    <a class="dtc v-mid mid-gray link dim w-25" href="#" title="Home">
+        <img src="http://tachyons.io/img/logo.jpg" class="dib w2 h2 br-100" alt="DAY RATE CALCULATOR">
+    </a>
+
+    <div class="dtc v-mid w-75 tr">
+        <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="https://twitter.com/jwmoz" title="JMOZ">TWITTER</a>
+        <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="https://weworkcontract.com" title="Contract Jobs">CONTRACT JOBS</a>
+    </div>
+</nav>
+
+<form class="mw8 center black-80 pv4">
+    <div class="measure">
+        <label for="dayrate" class="f6 b db mb2">day rate:</label>
+        <input id="dayrate" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc"
+               placeholder="Enter your day rate e.g. 400">
+    </div>
+</form>
+
+<article class="mw8 center pv4" data-name="slab-stat-small">
+    <div class="cf">
+        <dl class="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+            <dd class="f6 fw4 ml0">per week</dd>
+            <dd class="f3 fw6 ml0 pv2" id="perweek">2000</dd>
+            <dd class="f6 fw4 ml0"><span id="perweekvat">2400</span> inc. vat</dd>
+        </dl>
+        <dl class="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+            <dd class="f6 fw4 ml0">4 weeks</dd>
+            <dd class="f3 fw6 ml0 pv2" id="weeks4">8000</dd>
+            <dd class="f6 fw4 ml0"><span id="weeks4vat">9600</span> inc. vat</dd>
+        </dl>
+        <dl class="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+            <dd class="f6 fw4 ml0">48 weeks</dd>
+            <dd class="f3 fw6 ml0 pv2" id="weeks48">96000</dd>
+            <dd class="f6 fw4 ml0"><span id="weeks48vat">115200</span> inc. vat</dd>
+        </dl>
+        <dl class="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l">
+            <dd class="f6 fw4 ml0">52 weeks</dd>
+            <dd class="f3 fw6 ml0 pv2" id="weeks52">104000</dd>
+            <dd class="f6 fw4 ml0"><span id="weeks52vat">124800</span> inc. vat</dd>
+        </dl>
+    </div>
+</article>
+
+<div class="">
+    <div class="overflow-auto">
+        <table class="f6 w-100 mw8 center pv4" cellspacing="0" id="thetable">
+            <thead>
+            <tr>
+                <th class="fw6 bb b--black-20 tl pb3 pr3 bg-white">week</th>
+                <th class="fw6 bb b--black-20 tl pb3 pr3 bg-white">cumulative</th>
+                <th class="fw6 bb b--black-20 tl pb3 pr3 bg-white">inc. vat</th>
+            </tr>
+            </thead>
+            <tbody class="lh-copy">
+
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">1</td>
+                <td class="pv3 pr3 bb b--black-20">2000</td>
+                <td class="pv3 pr3 bb b--black-20">2400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">2</td>
+                <td class="pv3 pr3 bb b--black-20">4000</td>
+                <td class="pv3 pr3 bb b--black-20">4800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">3</td>
+                <td class="pv3 pr3 bb b--black-20">6000</td>
+                <td class="pv3 pr3 bb b--black-20">7200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">4</td>
+                <td class="pv3 pr3 bb b--black-20">8000</td>
+                <td class="pv3 pr3 bb b--black-20">9600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">5</td>
+                <td class="pv3 pr3 bb b--black-20">10000</td>
+                <td class="pv3 pr3 bb b--black-20">12000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">6</td>
+                <td class="pv3 pr3 bb b--black-20">12000</td>
+                <td class="pv3 pr3 bb b--black-20">14400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">7</td>
+                <td class="pv3 pr3 bb b--black-20">14000</td>
+                <td class="pv3 pr3 bb b--black-20">16800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">8</td>
+                <td class="pv3 pr3 bb b--black-20">16000</td>
+                <td class="pv3 pr3 bb b--black-20">19200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">9</td>
+                <td class="pv3 pr3 bb b--black-20">18000</td>
+                <td class="pv3 pr3 bb b--black-20">21600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">10</td>
+                <td class="pv3 pr3 bb b--black-20">20000</td>
+                <td class="pv3 pr3 bb b--black-20">24000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">11</td>
+                <td class="pv3 pr3 bb b--black-20">22000</td>
+                <td class="pv3 pr3 bb b--black-20">26400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">12</td>
+                <td class="pv3 pr3 bb b--black-20">24000</td>
+                <td class="pv3 pr3 bb b--black-20">28800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">13</td>
+                <td class="pv3 pr3 bb b--black-20">26000</td>
+                <td class="pv3 pr3 bb b--black-20">31200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">14</td>
+                <td class="pv3 pr3 bb b--black-20">28000</td>
+                <td class="pv3 pr3 bb b--black-20">33600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">15</td>
+                <td class="pv3 pr3 bb b--black-20">30000</td>
+                <td class="pv3 pr3 bb b--black-20">36000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">16</td>
+                <td class="pv3 pr3 bb b--black-20">32000</td>
+                <td class="pv3 pr3 bb b--black-20">38400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">17</td>
+                <td class="pv3 pr3 bb b--black-20">34000</td>
+                <td class="pv3 pr3 bb b--black-20">40800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">18</td>
+                <td class="pv3 pr3 bb b--black-20">36000</td>
+                <td class="pv3 pr3 bb b--black-20">43200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">19</td>
+                <td class="pv3 pr3 bb b--black-20">38000</td>
+                <td class="pv3 pr3 bb b--black-20">45600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">20</td>
+                <td class="pv3 pr3 bb b--black-20">40000</td>
+                <td class="pv3 pr3 bb b--black-20">48000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">21</td>
+                <td class="pv3 pr3 bb b--black-20">42000</td>
+                <td class="pv3 pr3 bb b--black-20">50400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">22</td>
+                <td class="pv3 pr3 bb b--black-20">44000</td>
+                <td class="pv3 pr3 bb b--black-20">52800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">23</td>
+                <td class="pv3 pr3 bb b--black-20">46000</td>
+                <td class="pv3 pr3 bb b--black-20">55200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">24</td>
+                <td class="pv3 pr3 bb b--black-20">48000</td>
+                <td class="pv3 pr3 bb b--black-20">57600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">25</td>
+                <td class="pv3 pr3 bb b--black-20">50000</td>
+                <td class="pv3 pr3 bb b--black-20">60000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">26</td>
+                <td class="pv3 pr3 bb b--black-20">52000</td>
+                <td class="pv3 pr3 bb b--black-20">62400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">27</td>
+                <td class="pv3 pr3 bb b--black-20">54000</td>
+                <td class="pv3 pr3 bb b--black-20">64800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">28</td>
+                <td class="pv3 pr3 bb b--black-20">56000</td>
+                <td class="pv3 pr3 bb b--black-20">67200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">29</td>
+                <td class="pv3 pr3 bb b--black-20">58000</td>
+                <td class="pv3 pr3 bb b--black-20">69600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">30</td>
+                <td class="pv3 pr3 bb b--black-20">60000</td>
+                <td class="pv3 pr3 bb b--black-20">72000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">31</td>
+                <td class="pv3 pr3 bb b--black-20">62000</td>
+                <td class="pv3 pr3 bb b--black-20">74400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">32</td>
+                <td class="pv3 pr3 bb b--black-20">64000</td>
+                <td class="pv3 pr3 bb b--black-20">76800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">33</td>
+                <td class="pv3 pr3 bb b--black-20">66000</td>
+                <td class="pv3 pr3 bb b--black-20">79200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">34</td>
+                <td class="pv3 pr3 bb b--black-20">68000</td>
+                <td class="pv3 pr3 bb b--black-20">81600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">35</td>
+                <td class="pv3 pr3 bb b--black-20">70000</td>
+                <td class="pv3 pr3 bb b--black-20">84000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">36</td>
+                <td class="pv3 pr3 bb b--black-20">72000</td>
+                <td class="pv3 pr3 bb b--black-20">86400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">37</td>
+                <td class="pv3 pr3 bb b--black-20">74000</td>
+                <td class="pv3 pr3 bb b--black-20">88800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">38</td>
+                <td class="pv3 pr3 bb b--black-20">76000</td>
+                <td class="pv3 pr3 bb b--black-20">91200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">39</td>
+                <td class="pv3 pr3 bb b--black-20">78000</td>
+                <td class="pv3 pr3 bb b--black-20">93600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">40</td>
+                <td class="pv3 pr3 bb b--black-20">80000</td>
+                <td class="pv3 pr3 bb b--black-20">96000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">41</td>
+                <td class="pv3 pr3 bb b--black-20">82000</td>
+                <td class="pv3 pr3 bb b--black-20">98400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">42</td>
+                <td class="pv3 pr3 bb b--black-20">84000</td>
+                <td class="pv3 pr3 bb b--black-20">100800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">43</td>
+                <td class="pv3 pr3 bb b--black-20">86000</td>
+                <td class="pv3 pr3 bb b--black-20">103200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">44</td>
+                <td class="pv3 pr3 bb b--black-20">88000</td>
+                <td class="pv3 pr3 bb b--black-20">105600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">45</td>
+                <td class="pv3 pr3 bb b--black-20">90000</td>
+                <td class="pv3 pr3 bb b--black-20">108000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">46</td>
+                <td class="pv3 pr3 bb b--black-20">92000</td>
+                <td class="pv3 pr3 bb b--black-20">110400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">47</td>
+                <td class="pv3 pr3 bb b--black-20">94000</td>
+                <td class="pv3 pr3 bb b--black-20">112800</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">48</td>
+                <td class="pv3 pr3 bb b--black-20">96000</td>
+                <td class="pv3 pr3 bb b--black-20">115200</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">49</td>
+                <td class="pv3 pr3 bb b--black-20">98000</td>
+                <td class="pv3 pr3 bb b--black-20">117600</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">50</td>
+                <td class="pv3 pr3 bb b--black-20">100000</td>
+                <td class="pv3 pr3 bb b--black-20">120000</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">51</td>
+                <td class="pv3 pr3 bb b--black-20">102000</td>
+                <td class="pv3 pr3 bb b--black-20">122400</td>
+            </tr>
+            <tr>
+                <td class="pv3 pr3 bb b--black-20">52</td>
+                <td class="pv3 pr3 bb b--black-20">104000</td>
+                <td class="pv3 pr3 bb b--black-20">124800</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function update_table() {
+            var day_rate = document.getElementById("dayrate").value;
+            var per_week = day_rate * 5;
+            var per_week_inc_vat = per_week * 1.2;
+            
+            document.getElementById("perweek").innerText = per_week;
+            document.getElementById("perweekvat").innerText = per_week_inc_vat;
+            document.getElementById("weeks4").innerText = per_week * 4;
+            document.getElementById("weeks4vat").innerText = per_week_inc_vat * 4;
+            document.getElementById("weeks48").innerText = per_week * 48;
+            document.getElementById("weeks48vat").innerText = per_week_inc_vat * 48;
+            document.getElementById("weeks52").innerText = per_week * 52;
+            document.getElementById("weeks52vat").innerText = per_week_inc_vat * 52;
+
+            var table = document.getElementById("thetable");
+
+            for (var i = 1; i <= 52; i++) {
+                table.tBodies[0].rows[i - 1].cells[1].innerHTML = i * per_week;
+                table.tBodies[0].rows[i - 1].cells[2].innerHTML = i * per_week_inc_vat;
+            }
+        }
+
+        document.getElementById("dayrate").addEventListener("keyup", update_table);
+    });
+</script>
+</body>
+</html>
+
+
